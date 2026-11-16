@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИТ-МОСКВА — Единый сервис бронирования</title>
+    <title>ИТ-МОСКВА — Авторизация</title>
     <link rel="stylesheet" href="authorization.css">
 </head>
 <body>
-<body>
+
+    <div id="support-sent" class="modal-overlay">
+        <div class="success-banner">
+            <span>Заявка в поддержку успешно отправлена. Ответ придёт на вашу почту.</span>
+            <a href="#" class="banner-close">Закрыть</a>
+        </div>
+    </div>
+
     <header class="header">
         <div class="logo">ИТ-МОСКВА</div>
         <div class="header-link">Единый аккаунт колледжа</div>
     </header>
+
     <div class="wrapper">
         <main class="main-content">
             <section class="info-section">
                 <h1>Ваш колледж.<br>Ваши возможности.</h1>
                 <p class="subtitle">Аудитории и оборудование для учёбы, командных проектов и новых идей.</p>
+
                 <div class="steps">
                     <div class="step-card">
                         <span class="step-number">01</span>
@@ -41,18 +50,20 @@
                     </div>
                 </div>
             </section>
+
             <aside class="auth-section">
                 <div class="auth-card">
                     <span class="badge">ДОБРО ПОЖАЛОВАТЬ</span>
                     <h2>Вход в систему</h2>
                     <p class="auth-desc">Используйте единый аккаунт ИТ-Москва. Отдельная регистрация не нужна.</p>
+
                     <div class="info-box">
                         <strong>Единый вход колледжа</strong>
                         <p>Доступ для студентов и сотрудников. Роль определяется автоматически.</p>
                     </div>
-                    <button class="btn-primary">Войти через IT-Team &rarr;</button>
-                    <p class="hint">Вы перейдёте на защищённую страницу входа.</p>
-                    <a href="#" class="support-link">Не получается войти? Обратиться в поддержку &rarr;</a>
+
+                    <a href="main.html" class="btn-primary">Войти через IT-Team</a>
+                    <a href="#support-modal" class="support-link">Не получается войти? Обратиться в поддержку</a>
                 </div>
                 <div class="footer-note">
                     Доступ к ресурсам предоставляется после авторизации.
@@ -60,9 +71,56 @@
             </aside>
         </main>
     </div>
+
+    <div id="support-modal" class="modal-overlay">
+        <div class="support-modal">
+            <div class="modal-header">
+                <h3>Обращение в поддержку</h3>
+                <a href="#" class="modal-close">&times;</a>
+            </div>
+            <p class="modal-desc">Опишите проблему со входом, и мы отправим письмо в службу поддержки.</p>
+
+            <div class="support-form">
+                <label class="field-label">Ваша почта</label>
+                <input type="email" class="support-input" placeholder="student@college.ru">
+
+                <label class="field-label">Сообщение</label>
+                <textarea class="support-input support-textarea" rows="4" placeholder="Не удаётся войти через IT-Team..."></textarea>
+
+                <div class="modal-actions">
+                    <a href="#" class="btn-cancel">Отмена</a>
+                    <a href="#support-sent" class="btn-send">Отправить письмо</a>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+<div id="general-support-modal" class="modal-overlay">
+    <div class="support-modal">
+        <div class="modal-header">
+            <h3>Обратная связь</h3>
+            <a href="#" class="modal-close">&times;</a>
+        </div>
+        <p class="modal-desc">Оставьте свой отзыв, задайте вопрос или предложите улучшение по работе сервиса</p>
+
+        <div class="support-form">
+            <label class="field-label">Ваша почта</label>
+            <input type="email" class="support-input" placeholder="student@college.ru">
+
+            <label class="field-label">Сообщение</label>
+            <textarea class="support-input support-textarea" rows="4" placeholder="Текст вашего обращения..."></textarea>
+
+            <div class="modal-actions">
+                <a href="#" class="btn-cancel">Отмена</a>
+                <a href="#support-sent" class="btn-send">Отправить письмо</a>
+            </div>
+        </div>
+    </div>
+</div>
     <footer class="footer">
         <span>ИТ-Москва   Единый сервис бронирования</span>
-        <a href="#">Помощь и правила</a>
+        <a href="#general-support-modal">Помощь и поддержка</a>
     </footer>
+
 </body>
 </html>

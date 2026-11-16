@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИТ-МОСКВА — Каталог ресурсов</title>
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <div id="support-sent" class="modal-overlay">
+        <div class="success-banner">
+            <span>Заявка успешно отправлена. Ответ придёт на вашу почту.</span>
+            <a href="#" class="banner-close">Закрыть</a>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="main.html" class="logo">ИТ-МОСКВА</a>
+            <span class="logo-sub">Бронирование ресурсов</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="main.html" class="nav-item">Главная</a>
+            <a href="catalog.html" class="nav-item active">Каталог ресурсов</a>
+            <a href="#" class="nav-item">Календарь</a>
+            <a href="#" class="nav-item">Мои брони</a>
+        </nav>
+        <div class="user-profile">Администратор</div>
+    </header>
+
+    <div class="wrapper">
+        <main class="main-content">
+            <section class="hero-section">
+                <h1>Найдите подходящий ресурс</h1>
+                <p class="subtitle">Отфильтруйте аудитории и оборудование под вашу задачу.</p>
+            </section>
+
+            <div class="catalog-layout">
+                <aside class="filters-sidebar">
+                    <h2>Фильтры</h2>
+
+                    <div class="filter-group">
+                        <label>Поиск</label>
+                        <input type="text" id="filter-search" class="filter-input" placeholder="Название или номер">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Тип ресурса</label>
+                        <select id="filter-type" class="filter-input">
+                            <option value="all">Все ресурсы</option>
+                            <option value="aud">Аудитории</option>
+                            <option value="eq">Оборудование</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Дата</label>
+                        <input type="date" id="filter-date" class="filter-input" value="2026-11-16">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Время</label>
+                        <input type="text" id="filter-time" class="filter-input" placeholder="10:00 - 11:30">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Вместимость</label>
+                        <input type="text" id="filter-capacity" class="filter-input" placeholder="Любая">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Характеристики</label>
+                        <input type="text" id="filter-features" class="filter-input" placeholder="Любые">
+                    </div>
+
+                    <button type="button" id="btn-apply-filters" class="btn-filter">Применить фильтры</button>
+                    <button type="button" id="btn-reset-filters" class="btn-reset">Сбросить фильтры</button>
+                </aside>
+
+                <section class="catalog-content">
+                    <div class="catalog-top-bar">
+                        <div class="tabs-group">
+                            <button type="button" class="tab-btn active" data-filter="all">Все ресурсы</button>
+                            <button type="button" class="tab-btn" data-filter="aud">Аудитории</button>
+                            <button type="button" class="tab-btn" data-filter="eq">Оборудование</button>
+                        </div>
+                        <div class="counter-sort">
+                            <span>20 ресурсов  16 ноября, 10:00 - 11:30</span>
+                        </div>
+                    </div>
+
+                    <div class="items-scroll-box">
+                        <div class="items-grid">
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Аудитория 304</h3>
+                                <p class="item-specs">30 мест   3 этаж</p>
+                                <p class="item-features">Проектор   доска   Wi-Fi</p>
+                                <span class="item-status free">Свободно в выбранное время</span> 
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Лаборатория 202</h3>
+                                <p class="item-specs">24 места   3 этаж</p>
+                                <p class="item-features">24 ПК   интерактивная панель</p>
+                                <span class="item-status busy">Занято в выбранное время</span>
+                                <a href="#" class="item-action muted">Другое время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Рекреация 2 этажа</h3>
+                                <p class="item-specs">25 мест   2 этаж</p>
+                                <p class="item-features">Экран   Wi-Fi</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Ноутбук Бештау</h3>
+                                <p class="item-specs">56 шт.   Выдача в кабинете 105</p>
+                                <p class="item-features">15,6"   16 ГБ RAM   Windows 11</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Проектор Epson</h3>
+                                <p class="item-specs">27 шт.   Выдача в кабинете 105</p>
+                                <p class="item-features">HDMI кабель</p>
+                                <span class="item-status busy">Занято в выбранное время</span>
+                                <a href="#" class="item-action muted">Другое время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Аудитория 212</h3>
+                                <p class="item-specs">28 мест   2 этаж</p>
+                                <p class="item-features">Маркерная доска   Wi-Fi</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Лаборатория 401</h3>
+                                <p class="item-specs">20 мест   4 этаж</p>
+                                <p class="item-features">20 моноблоков   проектор</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Аудитория 118</h3>
+                                <p class="item-specs">28 мест   1 этаж</p>
+                                <p class="item-features">Телевизор   HDMI   Wi-Fi</p>
+                                <span class="item-status busy">Занято в выбранное время</span>
+                                <a href="#" class="item-action muted">Другое время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Аудитория 310</h3>
+                                <p class="item-specs">36 мест   3 этаж</p>
+                                <p class="item-features">Проектор   акустика   Wi-Fi</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Рекреация 3 этаж</h3>
+                                <p class="item-specs">40 мест   3 этаж</p>
+                                <p class="item-features">Розетки у столов   Wi-Fi</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Лаборатория 213</h3>
+                                <p class="item-specs">18 мест   2 этаж</p>
+                                <p class="item-features">Стенды   ПК</p>
+                                <span class="item-status busy">Занято в выбранное время</span>
+                                <a href="#" class="item-action muted">Другое время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Микрофон DJI MIC mini</h3>
+                                <p class="item-specs">11 шт.   Выдача в кабинете 105</p>
+                                <p class="item-features">USB-C  ресивер в комплекте</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Камера Sony ZV-E10</h3>
+                                <p class="item-specs">6 шт.   Выдача в кабинете 105</p>
+                                <p class="item-features">Штатив   карта памяти 128 ГБ</p> 
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Графический планшет</h3>
+                                <p class="item-specs">63 шт.   Выдача в кабинете 105</p>
+                                <p class="item-features">Стилус  USB кабель</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Комплект Arduino Uno</h3>
+                                <p class="item-specs">7 набора  Выдача в кабинете 105</p>
+                                <p class="item-features">Макетная плата  датчики  провода</p>
+                                <span class="item-status busy">Занято в выбранное время</span>
+                                <a href="#" class="item-action muted">Другое время ;</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Флипчарт</h3>
+                                <p class="item-specs">17 шт.  1 этаж</p>
+                                <p class="item-features">Магнитная поверхность  маркеры</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Ноутбук Lenovo ThinkPad</h3>
+                                <p class="item-specs">19 шт.  Выдача в кабинете 105</p>
+                                <p class="item-features">14"  16 ГБ RAM  Linux</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge aud">АУДИТОРИЯ</span>
+                                <h3>Аудитория 115</h3>
+                                <p class="item-specs">22 места  1 этаж</p>
+                                <p class="item-features">Интерактивная доска  Wi-Fi</p>
+                                <span class="item-status free">Свободно в выбранное время</span>
+                                <a href="#" class="item-action">Выбрать время</a>
+                            </article>
+
+                            <article class="item-card">
+                                <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
+                                <h3>Шлем VR Meta Quest</h3>
+                                <p class="item-specs">21 комплект  116 аудитория</p>
+                                <p class="item-features">Контроллеры  зарядная станция</p>
+                                <span class="item-status busy">Занято в выбранное время</span>
+                                <a href="#" class="item-action muted">Другое время </a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="general-support-modal" class="modal-overlay">
+        <div class="support-modal">
+            <div class="modal-header">
+                <h3>Обратная связь</h3>
+                <a href="#" class="modal-close">&times;</a>
+            </div>
+            <p class="modal-desc">Есть вопрос, идея или нашли ошибку? Напишите нам, и мы ответим на вашу почту.</p>
+
+            <div class="support-form">
+                <label class="field-label">Ваша почта</label>
+                <input type="email" class="support-input" placeholder="student@college.ru">
+
+                <label class="field-label">Сообщение</label>
+                <textarea class="support-input support-textarea" rows="4" placeholder="Опишите ваш вопрос, проблему или предложение..."></textarea>
+
+                <div class="modal-actions">
+                    <a href="#" class="btn-cancel">Отмена</a>
+                    <a href="#support-sent" class="btn-send">Отправить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span>ИТ-Москва • Единый сервис бронирования</span>
+        <a href="#general-support-modal">Помощь и правила</a>
+    </footer>
+    <div id="general-support-modal" class="modal-overlay">...</div>
+    <script src="catalog.js"></script>
+</body>
+</html>
+</body>
+</html>

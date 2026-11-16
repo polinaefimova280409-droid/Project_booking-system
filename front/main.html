@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИТ-МОСКВА — Главная</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="main.html" class="logo">ИТ-МОСКВА</a>
+            <span class="logo-sub">Бронирование ресурсов</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="main.html" class="nav-item active">Главная</a>
+            <a href="catalog.html" class="nav-item">Каталог ресурсов</a>
+            <a href="#" class="nav-item">Календарь</a>
+            <a href="#" class="nav-item">Мои брони</a>
+        </nav>
+        <div class="user-profile">Администратор</div>
+    </header>
+
+    <div class="wrapper">
+        <main class="main-content">
+            <section class="hero-section">
+                <h1>Найдите место для своих идей</h1>
+                <p class="subtitle">Бронируйте аудитории и оборудование колледжа в одном месте.</p>
+            </section>
+
+            <section class="search-card">
+                <h2>Что и когда вам нужно?</h2>
+                <div class="search-grid">
+                    <div class="search-field">
+                        <label>Ресурс</label>
+                        <input type="text" id="search-name" class="input-box" placeholder="Название или номер">
+                </div>
+                <div class="search-field">
+                    <label>Тип</label>
+                    <select id="search-type" class="input-box select-box">
+                        <option value="all">Все ресурсы</option>
+                        <option value="aud">Аудитории</option>
+                        <option value="eq">Оборудование</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Дата</label>
+                    <input type="date" id="search-date" class="input-box date-box">
+                </div>
+                <button type="button" id="btn-search" class="btn-search">Найти ресурс</button>
+                </div>
+                <p class="search-hint">Свободные интервалы можно выбрать в календаре ресурса.</p>
+            </section>
+
+            <section class="section-block">
+                <div class="section-header">
+                    <h2>Ближайшие брони</h2>
+                    <a href="#" class="link-all">Все мои брони </a>
+                </div>
+                <div class="bookings-grid">
+                    <article class="booking-card">
+                        <div class="booking-top">
+                            <span class="date-badge">17 НОЯ   ВТ</span>
+                            <span class="status confirmed">Подтверждено</span>
+                        </div>
+                        <div class="booking-info">
+                            <h3>Аудитория 212</h3>
+                            <p>Проектная работа   6 участников</p>
+                        </div>
+                        <a href="#" class="booking-link">Открыть бронь </a>
+                    </article>
+
+                    <article class="booking-card">
+                        <div class="booking-top">
+                            <span class="date-badge">18 НОЯ   СР</span>
+                            <span class="status pending">На согласовании</span>
+                        </div>
+                        <div class="booking-info">
+                            <h3>Шлем VR Meta Quest</h3>
+                            <p>Развлечение вне пар</p>
+                        </div>
+                        <a href="#" class="booking-link">Открыть бронь </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <h2>Каталоги ресурсов</h2>
+                <div class="catalogs-grid">
+                    <article class="catalog-card">
+                        <h3>Аудитории</h3>
+                        <p>Учебные классы, лаборатории и переговорные</p>
+                        <a href="catalog.html" class="catalog-link">Перейти в каталог </a>
+                    </article>
+                    <article class="catalog-card">
+                        <h3>Оборудование</h3>
+                        <p>Ноутбуки, VR-очки, проекторы и комплекты</p>
+                        <a href="catalog.html" class="catalog-link">Перейти в каталог </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="support-sent" class="modal-overlay">
+        <div class="success-banner">
+            <span>Заявка успешно отправлена. Ответ придёт на вашу почту.</span>
+            <a href="#" class="banner-close">Закрыть</a>
+        </div>
+    </div>
+
+    <div id="general-support-modal" class="modal-overlay">
+        <div class="support-modal">
+            <div class="modal-header">
+                <h3>Обратная связь</h3>
+                <a href="#" class="modal-close">&times;</a>
+            </div>
+            <p class="modal-desc">Есть вопрос, идея или нашли ошибку? Напишите нам, и мы ответим на вашу почту.</p>
+
+            <div class="support-form">
+                <label class="field-label">Ваша почта</label>
+                <input type="email" class="support-input" placeholder="student@college.ru">
+
+                <label class="field-label">Сообщение</label>
+                <textarea class="support-input support-textarea" rows="4" placeholder="Опишите ваш вопрос, проблему или предложение..."></textarea>
+
+                <div class="modal-actions">
+                    <a href="#" class="btn-cancel">Отмена</a>
+                    <a href="#support-sent" class="btn-send">Отправить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span>ИТ-Москва   Единый сервис бронирования</span>
+        <a href="#general-support-modal">Помощь и поддержка</a>
+    </footer>
+<script src="main.js"></script>
+</body>
+</html>
