@@ -1,22 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const tabs = document.querySelectorAll('.tab-btn');
     const cards = document.querySelectorAll('.item-card');
 
     const searchInput = document.getElementById('filter-search');
     const typeSelect = document.getElementById('filter-type');
-
+    
     const btnApply = document.getElementById('btn-apply-filters');
     const btnReset = document.getElementById('btn-reset-filters');
 
     const applyFilters = () => {
 
-        const activeTab = document.querySelector('.tab-btn.active');
-        const activeTabValue = activeTab ? activeTab.getAttribute('data-filter') : 'all';
-
-        const selectValue = typeSelect ? typeSelect.value : 'all';
-
-        const currentFilterType = selectValue !== 'all' ? selectValue : activeTabValue;
+        const currentFilterType = typeSelect ? typeSelect.value : 'all';
 
         const searchText = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
@@ -26,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const cardTitle = card.querySelector('h3').innerText.toLowerCase();
 
             const matchesType = (currentFilterType === 'all' || currentFilterType === cardType);
-
             const matchesText = cardTitle.includes(searchText);
 
             if (matchesType && matchesText) {
@@ -73,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnReset.addEventListener('click', () => {
             if (searchInput) searchInput.value = '';
             if (typeSelect) typeSelect.value = 'all';
+
             tabs.forEach(t => t.classList.remove('active'));
             const allTab = document.querySelector('.tab-btn[data-filter="all"]');
             if (allTab) allTab.classList.add('active');
@@ -80,3 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
             applyFilters();
         });
     }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    const type = urlParams.get('type');
+
+    if (type) {
+        if (typeSelect) typeSelect.value = type;
+        const targetTab = document.querySelector(`.tab-btn[data-filter="${type}"]`);
+        if (targetTab) {
+            tabs.forEach(t => t.classList.remove('active'));
+            targetTab.classList.add('active');
+        }
+    }
+
+    if (query && searchInput) {
+        searchInput.value = query;
+    }
+
+    applyFilters();
+});
