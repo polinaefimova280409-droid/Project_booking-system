@@ -1,5 +1,6 @@
 @import url('main.css');
 
+
 .page-top {
     margin-bottom: 24px;
 }
@@ -19,12 +20,14 @@
     margin-bottom: 4px;
 }
 
+
 .resource-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 24px;
     align-items: start;
 }
+
 
 .info-card {
     background-color: #131b2e;
@@ -80,12 +83,13 @@
     line-height: 1.5;
 }
 
+
 .calendar-section {
     background-color: #131b2e;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 24px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .calendar-header {
@@ -116,6 +120,7 @@
     font-family: inherit;
 }
 
+
 .calendar-grid-container {
     display: flex;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -123,6 +128,7 @@
     background-color: #0c111d;
     margin-bottom: 20px;
     height: 420px; 
+    user-select: none;
 }
 
 .time-col {
@@ -148,7 +154,6 @@
 .days-grid {
     display: flex;
     flex-grow: 1;
-    overflow-x: auto;
 }
 
 .day-col {
@@ -177,7 +182,7 @@
 
 .day-body {
     position: relative;
-    height: 350px;
+    height: 350px; 
     background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 100% 50px;
     cursor: crosshair;
@@ -203,18 +208,21 @@
     margin-top: 2px;
 }
 
+
 .slot.busy {
-    background-color: #334155;
+    background-color: #2a364f; 
     color: #94a3b8;
-    border: 1px solid #475569;
+    border: 1px solid #3b4b6b;
+    z-index: 5;
 }
 
 .slot.selected {
-    background-color: #3b82f6;
+    background-color: #3b82f6; 
     color: #ffffff;
     border: 1px solid #2563eb;
     z-index: 10;
 }
+
 
 .calendar-footer {
     display: flex;
@@ -250,10 +258,6 @@
     font-family: inherit;
 }
 
-.btn-submit:hover {
-    background-color: #2563eb;
-}
-
 .legend {
     display: flex;
     gap: 16px;
@@ -269,14 +273,15 @@
 
 .dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
 .free-dot { background-color: transparent; border: 1px solid #475569; }
-.busy-dot { background-color: #334155; }
+.busy-dot { background-color: #2a364f; }
 .sel-dot { background-color: #3b82f6; }
+
 
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: rgba(8, 12, 22, 0.85);
-    display: none; /* Скрыто */
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -394,15 +399,8 @@
     cursor: pointer;
     font-family: inherit;
 }
-
 .form-hint { color: #64748b; font-size: 11px; text-align: right; }
 
-.booking-modal-card {
-
-    max-height: 85vh;
-    overflow-y: auto; 
-    padding-right: 20px;
-}
 
 .booking-modal-card::-webkit-scrollbar {
     width: 6px;
