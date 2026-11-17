@@ -16,8 +16,8 @@
         <nav class="nav-menu">
             <a href="main.html" class="nav-item active">Главная</a>
             <a href="catalog.html" class="nav-item">Каталог ресурсов</a>
-            <a href="#" class="nav-item">Календарь</a>
-            <a href="#" class="nav-item">Мои брони</a>
+            <a href="calendar.html" class="nav-item">Календарь</a>
+            <a href="myArmor.html" class="nav-item">Мои брони</a>
         </nav>
         <div class="user-profile">Администратор</div>
     </header>
@@ -35,20 +35,20 @@
                     <div class="search-field">
                         <label>Ресурс</label>
                         <input type="text" id="search-name" class="input-box" placeholder="Название или номер">
-                </div>
-                <div class="search-field">
-                    <label>Тип</label>
-                    <select id="search-type" class="input-box select-box">
-                        <option value="all">Все ресурсы</option>
-                        <option value="aud">Аудитории</option>
-                        <option value="eq">Оборудование</option>
-                    </select>
-                </div>
-                <div class="search-field">
-                    <label>Дата</label>
-                    <input type="date" id="search-date" class="input-box date-box">
-                </div>
-                <button type="button" id="btn-search" class="btn-search">Найти ресурс</button>
+                    </div>
+                    <div class="search-field">
+                        <label>Тип</label>
+                        <select id="search-type" class="input-box select-box">
+                            <option value="all">Все ресурсы</option>
+                            <option value="aud">Аудитории</option>
+                            <option value="eq">Оборудование</option>
+                        </select>
+                     </div>
+                    <div class="search-field">
+                        <label>Дата</label>
+                        <input type="date" id="search-date" class="input-box date-box">
+                    </div>
+                    <button type="button" id="btn-search" class="btn-search">Найти ресурс</button>
                 </div>
                 <p class="search-hint">Свободные интервалы можно выбрать в календаре ресурса.</p>
             </section>
@@ -56,7 +56,7 @@
             <section class="section-block">
                 <div class="section-header">
                     <h2>Ближайшие брони</h2>
-                    <a href="#" class="link-all">Все мои брони </a>
+                    <a href="myArmor.html" class="link-all">Все мои брони</a>
                 </div>
                 <div class="bookings-grid">
                     <article class="booking-card">
@@ -80,7 +80,7 @@
                             <h3>Шлем VR Meta Quest</h3>
                             <p>Развлечение вне пар</p>
                         </div>
-                        <a href="#" class="booking-link">Открыть бронь </a>
+                        <a href="myArmor.html" class="nav-item">Открыть бронь</a>
                     </article>
                 </div>
             </section>
@@ -91,12 +91,12 @@
                     <article class="catalog-card">
                         <h3>Аудитории</h3>
                         <p>Учебные классы, лаборатории и переговорные</p>
-                        <a href="catalog.html" class="catalog-link">Перейти в каталог </a>
+                        <a href="catalog.html?type=aud" class="catalog-link">Перейти в каталог</a>
                     </article>
                     <article class="catalog-card">
                         <h3>Оборудование</h3>
                         <p>Ноутбуки, VR-очки, проекторы и комплекты</p>
-                        <a href="catalog.html" class="catalog-link">Перейти в каталог </a>
+                        <a href="catalog.html?type=eq" class="catalog-link">Перейти в каталог</a>
                     </article>
                 </div>
             </section>

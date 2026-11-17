@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИТ-МОСКВА — Мои брони</title>
+    <link rel="stylesheet" href="myArmor.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="main.html" class="logo">ИТ-МОСКВА</a>
+            <span class="logo-sub">Бронирование ресурсов</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="main.html" class="nav-item">Главная</a>
+            <a href="catalog.html" class="nav-item">Каталог ресурсов</a>
+            <a href="calendar.html" class="nav-item">Календарь</a>
+            <a href="myArmor.html" class="nav-item active">Мои брони</a>
+        </nav>
+        <div class="user-profile">Администратор</div>
+    </header>
+
+    <div class="wrapper">
+        <main class="main-content">
+            <section class="hero-section bookings-hero">
+                <div>
+                    <h1>Ваши планы — в одном месте</h1>
+                    <p class="subtitle">Просматривайте заявки, меняйте время и отменяйте ненужные брони.</p>
+                </div>
+                <a href="catalog.html" class="btn-primary-new">Новая бронь &rarr;</a>
+            </section>
+
+            <div class="bookings-top-bar">
+                <div class="bookings-tabs">
+                    <button type="button" class="b-tab active" data-target="tab-active">Активные <span>3</span></button>
+                    <button type="button" class="b-tab" data-target="tab-history">История <span>2</span></button>
+                    <button type="button" class="b-tab" data-target="tab-cancelled">Отменённые <span>1</span></button>
+                </div>
+                <div class="bookings-sort">
+                    <span>Ближайшие сначала &bull;</span>
+                </div>
+            </div>
+
+            <div id="tab-active" class="bookings-list tab-content" style="display: flex;">
+                <article class="booking-item">
+                    <div class="booking-date-box">
+                        <span class="b-date">16 НОЯ ПН</span>
+                        <span class="b-time">10:00 — 11:30</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Аудитория 304</h3>
+                        <p class="b-specs">3 этаж • 6 участников</p>
+                        <p class="b-desc">Проектная работа</p>
+                    </div>
+                    <div class="booking-status-col">
+                        <span class="b-status confirmed">Подтверждено</span>
+                        <span class="b-id">Заявка № 1264</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-secondary">Изменить время</button>
+                        <button class="btn-text-danger">Отменить бронь</button>
+                    </div>
+                </article>
+
+                <article class="booking-item">
+                    <div class="booking-date-box">
+                        <span class="b-date">17 НОЯ ВТ</span>
+                        <span class="b-time">10:00 — 11:30</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Аудитория 212</h3>
+                        <p class="b-specs">2 этаж • 6 участников</p>
+                        <p class="b-desc">Проектная работа</p>
+                    </div>
+                    <div class="booking-status-col">
+                        <span class="b-status confirmed">Подтверждено</span>
+                        <span class="b-id">Заявка № 1265</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-secondary">Изменить время</button>
+                        <button class="btn-text-danger">Отменить бронь</button>
+                    </div>
+                </article>
+
+                <article class="booking-item">
+                    <div class="booking-date-box">
+                        <span class="b-date">18 НОЯ СР</span>
+                        <span class="b-time">14:00 — 15:00</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>VR-очки</h3>
+                        <p class="b-specs">1 комплект</p>
+                        <p class="b-desc">Развлечение вне пар</p>
+                    </div>
+                    <div class="booking-status-col">
+                        <span class="b-status pending">На согласовании</span>
+                        <span class="b-id">Заявка № 1266</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-secondary">Изменить время</button>
+                        <button class="btn-text-danger">Отменить бронь</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="tab-history" class="bookings-list tab-content" style="display: none;">
+                <article class="booking-item">
+                    <div class="booking-date-box">
+                        <span class="b-date">01 НОЯ СБ</span>
+                        <span class="b-time">12:00 — 13:30</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Лаборатория 305</h3>
+                        <p class="b-specs">3 этаж • 24 места</p>
+                        <p class="b-desc">Завершено</p>
+                    </div>
+                    <div class="booking-status-col">
+                        <span class="b-status confirmed">Завершено</span>
+                        <span class="b-id">Заявка № 1102</span>
+                    </div>
+                    <div class="booking-actions"></div>
+                </article>
+
+                <article class="booking-item">
+                    <div class="booking-date-box">
+                        <span class="b-date">28 ОКТ ВТ</span>
+                        <span class="b-time">15:00 — 16:30</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Ноутбук Бештау</h3>
+                        <p class="b-specs">1 шт.</p>
+                        <p class="b-desc">Выдача оборудования</p>
+                    </div>
+                    <div class="booking-status-col">
+                        <span class="b-status confirmed">Завершено</span>
+                        <span class="b-id">Заявка № 1085</span>
+                    </div>
+                    <div class="booking-actions"></div>
+                </article>
+            </div>
+
+            <div id="tab-cancelled" class="bookings-list tab-content" style="display: none;">
+                <article class="booking-item">
+                    <div class="booking-date-box">
+                        <span class="b-date">20 ОКТ ПН</span>
+                        <span class="b-time">08:30 — 10:00</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Проектор Epson</h3>
+                        <p class="b-specs">1 шт.</p>
+                        <p class="b-desc">Отменено пользователем</p>
+                    </div>
+                    <div class="booking-status-col">
+                        <span class="b-status" style="color: #f87171;">Отменено</span>
+                        <span class="b-id">Заявка № 0998</span>
+                    </div>
+                    <div class="booking-actions"></div>
+                </article>
+            </div>
+
+            <div class="info-banner">
+                Изменения времени проходят повторную проверку доступности. Отмена освобождает ресурс для других.
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <span>ИТ-Москва • Единый сервис бронирования</span>
+        <a href="#">Помощь и правила</a>
+    </footer>
+
+    <script src="myArmor.js"></script>
+</body>
+</html>

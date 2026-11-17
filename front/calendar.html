@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИТ-МОСКВА — Аудитория 304</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="main.html" class="logo">ИТ-МОСКВА</a>
+            <span class="logo-sub">Бронирование ресурсов</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="main.html" class="nav-item">Главная</a>
+            <a href="catalog.html" class="nav-item">Каталог ресурсов</a>
+            <a href="calendar.html" class="nav-item active">Календарь</a>
+            <a href="myArmor.html" class="nav-item">Мои брони</a>
+        </nav>
+        <div class="user-profile">Администратор</div>
+    </header>
+
+    <div class="wrapper">
+        <div class="page-top">
+            <div class="breadcrumbs">КАТАЛОГ / АУДИТОРИЯ 304</div>
+            <h1>Аудитория 304</h1>
+            <p class="subtitle">3 этаж &bull; 30 мест &bull; Проектор, доска, Wi-Fi</p>
+        </div>
+
+        <div class="resource-layout">
+            <aside class="resource-info">
+                <div class="info-card">
+                    <h2>Об аудитории</h2>
+                    <p class="info-desc">Пространство для занятий, встреч и проектной работы.</p>
+
+                    <div class="info-group">
+                        <label>Вместимость</label>
+                        <p>До 30 человек</p>
+                    </div>
+                    <div class="info-group">
+                        <label>Оборудование</label>
+                        <p>Проектор, доска, Wi-Fi</p>
+                    </div>
+                    <div class="info-group">
+                        <label>Расположение</label>
+                        <p>3 этаж</p>
+                    </div>
+                    <div class="info-group">
+                        <label>Доступность</label>
+                        <p>Пн-Пт, 09:00–18:00</p>
+                    </div>
+
+                    <div class="rules-block">
+                        <h3>Условия бронирования</h3>
+                        <p>Шаг выбора — 30 минут. Согласование не требуется. Освободите аудиторию к окончанию брони.</p>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="calendar-section">
+                <div class="calendar-header">
+                    <h2>16–20 ноября 2026</h2>
+                    <div class="calendar-nav">
+                        <button class="btn-nav">&lsaquo; Предыдущая</button>
+                        <button class="btn-nav">Следующая &rsaquo;</button>
+                    </div>
+                </div>
+
+                <div class="calendar-grid-container">
+
+                    <div class="time-col">
+                        <div class="time-cell">9:00</div>
+                        <div class="time-cell">10:00</div>
+                        <div class="time-cell">11:00</div>
+                        <div class="time-cell">12:00</div>
+                        <div class="time-cell">13:00</div>
+                        <div class="time-cell">14:00</div>
+                        <div class="time-cell">15:00</div>
+                    </div>
+
+                    <div class="days-grid">
+
+                        <div class="day-col" data-date="2026-11-16">
+                            <div class="day-header">Пн, 16</div>
+                            <div class="day-body">
+                                <div class="slot busy" style="top: 0%; height: 10%;">Занято<br><span>09:00-10:00</span></div>
+                                <div class="slot busy" style="top: 80%; height: 10%;">Занято<br><span>13:00-14:00</span></div>
+                                </div>
+                        </div>
+
+                        <div class="day-col" data-date="2026-11-17">
+                            <div class="day-header">Вт, 17</div>
+                            <div class="day-body">
+                                <div class="slot busy" style="top: 20%; height: 20%;">Занято<br><span>10:00-11:30</span></div>
+                            </div>
+                        </div>
+>
+                        <div class="day-col" data-date="2026-11-18">
+                            <div class="day-header">Ср, 18</div>
+                            <div class="day-body">
+                                <div class="slot busy" style="top: 60%; height: 30%;">Занято<br><span>12:00-14:00</span></div>
+                            </div>
+                        </div>
+>
+                        <div class="day-col" data-date="2026-11-19">
+                            <div class="day-header">Чт, 19</div>
+                            <div class="day-body">
+                                <div class="slot busy" style="top: 0%; height: 10%;">Занято<br><span>09:00-10:00</span></div>
+                            </div>
+                        </div>
+
+                        <div class="day-col" data-date="2026-11-20">
+                            <div class="day-header">Пт, 20</div>
+                            <div class="day-body">
+                                <div class="slot busy" style="top: 90%; height: 10%;">Занято<br><span>14:00-15:30</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-footer">
+                    <div class="booking-summary">
+                        <div class="summary-text">16 ноября • 10:00 — 11:30</div>
+                        <div class="summary-details">1 ч 30 мин • Свободно • Без согласования</div>
+                    </div>
+                    <button class="btn-submit">Забронировать &rarr;</button>
+                </div>
+
+                <div class="legend">
+                    <span><span class="dot free-dot"></span> Свободно — пустые ячейки</span>
+                    <span><span class="dot busy-dot"></span> Занято — серый</span>
+                    <span><span class="dot sel-dot"></span> Выбрано — синий</span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="booking-modal" class="modal-overlay">
+        <div class="booking-modal-card">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-badge">05 / БРОНИРОВАНИЕ</span>
+                    <h2>Забронировать ресурс</h2>
+                    <p class="modal-sub">Проверьте время и укажите цель бронирования.</p>
+                </div>
+                <a href="#" class="modal-close">&times;</a>
+            </div>
+
+            <div class="resource-brief">
+                <h3>Аудитория 304</h3>
+                <p>Корпус А • 3 этаж • 30 мест • Проектор, доска, Wi-Fi</p>
+            </div>
+
+            <form class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Дата *</label>
+                        <input type="date" id="modal-date" class="form-input" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Начало *</label>
+                        <input type="text" id="modal-start" class="form-input" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Окончание *</label>
+                        <input type="text" id="modal-end" class="form-input" readonly>
+                    </div>
+                    </div>
+
+                <div class="duration-info">
+                    <span id="modal-duration">Длительность: 1 ч 30 мин</span> • Согласование не требуется
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Цель бронирования *</label>
+                        <input type="text" class="form-input" value="Проектная работа">
+                    </div>
+                    <div class="form-group" style="max-width: 120px;">
+                        <label>Участников *</label>
+                        <input type="number" class="form-input" value="6">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Комментарий</label>
+                    <textarea class="form-input form-textarea" rows="2">Подготовка командного проекта по веб-разработке.</textarea>
+                </div>
+
+                <div class="requester-info">
+                    Заявитель: Полина • Студент • Аккаунт колледжа
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree-rules" checked>
+                    <label for="agree-rules">Я принимаю правила использования ресурса</label>
+                </div>
+
+                <div class="form-actions">
+                    <a href="#" class="btn-cancel">Отмена</a>
+                    <button type="button" class="btn-submit-confirm">Подтвердить бронирование</button>
+                </div>
+
+                <div class="form-hint">
+                    * Обязательные поля. Доступность повторно проверяется при отправке.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span>ИТ-Москва • Единый сервис бронирования</span>
+        <a href="#">Помощь и правила</a>
+    </footer>
+
+    <script src="calendar.js"></script>
+</body>
+</html>

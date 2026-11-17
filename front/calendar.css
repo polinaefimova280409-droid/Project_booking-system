@@ -1,0 +1,422 @@
+@import url('main.css');
+
+.page-top {
+    margin-bottom: 24px;
+}
+
+.breadcrumbs {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.page-top h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.resource-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.info-card {
+    background-color: #131b2e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.info-card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.info-desc {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.info-group {
+    margin-bottom: 16px;
+}
+
+.info-group label {
+    color: #64748b;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-group p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rules-block {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rules-block h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.rules-block p {
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.calendar-section {
+    background-color: #131b2e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    overflow: hidden; 
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-nav {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.calendar-grid-container {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: #0c111d;
+    margin-bottom: 20px;
+    height: 420px; 
+}
+
+.time-col {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    padding-top: 35px;
+}
+
+.time-cell {
+    height: 50px;
+    color: #64748b;
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8px;
+    margin-top: -8px; 
+    box-sizing: border-box;
+}
+
+.days-grid {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.day-col {
+    flex: 1;
+    min-width: 80px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.day-col:last-child {
+    border-right: none;
+}
+
+.day-header {
+    text-align: center;
+    font-size: 11px;
+    color: #94a3b8;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #131b2e;
+}
+
+.day-body {
+    position: relative;
+    height: 350px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 50px;
+    cursor: crosshair;
+}
+
+.slot {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    padding: 4px;
+    font-size: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.slot span {
+    font-size: 9px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.slot.busy {
+    background-color: #334155;
+    color: #94a3b8;
+    border: 1px solid #475569;
+}
+
+.slot.selected {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    z-index: 10;
+}
+
+.calendar-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.summary-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.summary-details {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.btn-submit {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-submit:hover {
+    background-color: #2563eb;
+}
+
+.legend {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+.free-dot { background-color: transparent; border: 1px solid #475569; }
+.busy-dot { background-color: #334155; }
+.sel-dot { background-color: #3b82f6; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(8, 12, 22, 0.85);
+    display: none; /* Скрыто */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+.booking-modal-card {
+    background-color: #131b2e;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.modal-badge {
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.booking-modal-card h2 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.modal-sub {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.modal-close {
+    color: #94a3b8;
+    font-size: 28px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.resource-brief {
+    background-color: #1e293b;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border-left: 3px solid #3b82f6;
+}
+
+.resource-brief h3 { font-size: 16px; margin-bottom: 4px; }
+.resource-brief p { color: #94a3b8; font-size: 12px; }
+
+.booking-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: flex; gap: 12px; }
+.form-group { display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.form-group label { color: #94a3b8; font-size: 12px; }
+
+.form-input {
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.duration-info { color: #38bdf8; font-size: 12px; }
+.requester-info { color: #64748b; font-size: 12px; margin-top: 4px; }
+
+.checkbox-group { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.checkbox-group input { width: 16px; height: 16px; accent-color: #3b82f6; }
+.checkbox-group label { color: #cbd5e1; font-size: 13px; }
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #cbd5e1;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.btn-submit-confirm {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.form-hint { color: #64748b; font-size: 11px; text-align: right; }
+
+.booking-modal-card {
+
+    max-height: 85vh;
+    overflow-y: auto; 
+    padding-right: 20px;
+}
+
+.booking-modal-card::-webkit-scrollbar {
+    width: 6px;
+}
+.booking-modal-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+.booking-modal-card::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+    opacity: 0.6;
+}

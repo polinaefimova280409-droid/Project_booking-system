@@ -6,12 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnSearch) {
         btnSearch.addEventListener('click', () => {
+
             const nameVal = encodeURIComponent(inputName.value.trim()); 
             const typeVal = selectType.value;
             const dateVal = inputDate.value;
+
             let url = `catalog.html?type=${typeVal}`;
-            if (nameVal) url += `&q=${nameVal}`;
-            if (dateVal) url += `&date=${dateVal}`;
+
+            if (nameVal) {
+                url += `&q=${nameVal}`;
+            }
+
+            if (dateVal) {
+                url += `&date=${dateVal}`;
+            }
+
             window.location.href = url;
         });
     }
