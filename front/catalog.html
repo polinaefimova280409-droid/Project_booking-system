@@ -144,7 +144,7 @@
                                 <span class="item-status free">Свободно в выбранное время</span> 
                                 <a href="#" class="item-action">Выбрать время</a>
                             </article>
-е -->
+                            
                             <article class="item-card">
                                 <span class="type-badge eq">ОБОРУДОВАНИЕ</span>
                                 <h3>Микрофон Boya</h3>
@@ -229,16 +229,30 @@
             </div>
             <p class="modal-desc">Есть вопрос, идея или нашли ошибку? Напишите нам, и мы ответим на вашу почту.</p>
 
-            <div class="support-form">
-                <label class="field-label">Ваша почта</label>
-                <input type="email" class="support-input" placeholder="student@college.ru">
-                <label class="field-label">Сообщение</label> 
-                <textarea class="support-input support-textarea" rows="4" placeholder="Опишите ваш вопрос, проблему или предложение..."></textarea>
+            <form class="support-form validation-form" novalidate>
+>
+                <div class="error-banner" style="display: none;">
+                    <strong>Проверьте введённые данные</strong>
+                    <span class="error-banner-text">Укажите почту и напишите сообщение.</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label">Ваша почта</label>
+                    <input type="email" class="support-input" placeholder="student@college.ru" required>
+                    <span class="error-text" style="display: none;">Введите почту в формате name@example.ru</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label">Сообщение</label>
+                    <textarea class="support-input support-textarea" rows="4" placeholder="Опишите ваш вопрос, проблему или предложение..." required></textarea>
+                    <span class="error-text" style="display: none;">Введите сообщение — поле не должно быть пустым.</span>
+                </div>
+
                 <div class="modal-actions">
                     <a href="#" class="btn-cancel">Отмена</a>
-                    <a href="#support-sent" class="btn-send">Отправить</a>
+                    <button type="submit" class="btn-send">Отправить</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -248,5 +262,6 @@
     </footer>
 
     <script src="catalog.js"></script>
+    <script src="validation.js"></script>
 </body>
 </html>
