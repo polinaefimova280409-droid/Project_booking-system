@@ -205,3 +205,140 @@
     border-radius: 8px;
     margin-top: 10px;
 }
+
+@media (max-width: 992px) {
+
+    .booking-item {
+        grid-template-columns: 160px 1fr;
+        gap: 16px;
+    }
+
+    .booking-status-col {
+        grid-column: 2;
+        margin-top: -8px;
+    }
+
+    .booking-actions {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+     .header {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    .wrapper {
+        padding: 20px 16px;
+    }
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-search {
+        grid-column: span 1;
+    }
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .bookings-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .btn-primary-new {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bookings-top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .bookings-tabs {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .b-tab {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .booking-item {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .booking-date-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    .booking-details h3 {
+        font-size: 16px;
+    }
+
+    .booking-status-col {
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .btn-secondary,
+    .btn-text-danger {
+        width: 100%;
+    }
+
+    .info-banner {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 20px;
+        margin-top: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .footer span {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer a {
+        color: #38bdf8;
+        white-space: nowrap;
+    }
+}

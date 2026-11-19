@@ -418,3 +418,158 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     opacity: 0.6;
 }
+
+@media (max-width: 992px) {
+    .resource-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .info-card h2, 
+    .info-desc, 
+    .rules-block {
+        grid-column: span 2;
+    }
+
+    .days-grid {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .day-col {
+        min-width: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    .wrapper {
+        padding: 20px 16px;
+    }
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-search {
+        grid-column: span 1;
+    }
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .wrapper {
+        padding: 20px 16px;
+    }
+    
+    .page-top h1 {
+        font-size: 28px;
+    }
+
+    .info-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-card h2, 
+    .info-desc, 
+    .rules-block {
+        grid-column: span 1;
+    }
+
+    .calendar-section {
+        padding: 16px;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .time-col {
+        width: 45px; 
+    }
+
+    .time-cell {
+        font-size: 10px;
+    }
+
+    .calendar-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-cancel, 
+    .btn-submit-confirm {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .booking-modal-card {
+        padding: 20px 16px;
+        max-height: 95vh;
+    }
+
+    body, html {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 20px;
+        margin-top: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .footer span {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer a {
+        color: #38bdf8;
+        white-space: nowrap;
+    }
+}
