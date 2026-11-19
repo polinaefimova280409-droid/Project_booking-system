@@ -547,3 +547,29 @@ button.btn-search {
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 20px;
+        margin-top: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .footer span {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer a {
+        color: #38bdf8;
+        white-space: nowrap;
+    }
+}

@@ -697,36 +697,26 @@ input[type="date"].filter-input {
 
 @media (max-width: 768px) {
     .header {
-        display: flex;
         flex-direction: column;
-        align-items: center;
         padding: 16px;
         gap: 16px;
     }
-
-    .header-left {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .logo-sub {
-        border-left: none;
-        padding-left: 0;
-    }
-
     .nav-menu {
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
-        width: 100%;
     }
-
-    .user-profile {
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        padding-top: 12px;
+    .wrapper {
+        padding: 20px 16px;
+    }
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-search {
+        grid-column: span 1;
+    }
+    .hero-section h1 {
+        font-size: 24px;
     }
 
     .wrapper {
@@ -739,6 +729,7 @@ input[type="date"].filter-input {
 
     .filters-sidebar {
         grid-template-columns: 1fr; 
+        padding: 16px;
     }
     
     .filters-sidebar h2,
@@ -749,5 +740,35 @@ input[type="date"].filter-input {
     
     .items-grid {
         grid-template-columns: 1fr; 
+    }
+    
+    .item-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 12px;
+        padding: 16px 20px;
+        margin-top: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .footer span {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer a {
+        color: #38bdf8;
+        white-space: nowrap;
     }
 }
