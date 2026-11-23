@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded'), () => {}
     const cards = document.querySelectorAll('.item-card');
     
     const searchInput = document.getElementById('filter-search');
@@ -161,4 +161,4 @@ document.addEventListener('DOMContentLoaded', () => {
     applySidebarFilters();
     if (window.location.search !== "") {
         window.history.replaceState({}, document.title, window.location.pathname);
-    }
+    };

@@ -573,3 +573,91 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         white-space: nowrap;
     }
 }
+@media (max-width: 768px) {
+    /* 1. Увеличиваем базовый размер текста во всей вкладке (кроме сетки расписания) */
+    .wrapper p,
+    .wrapper span,
+    .wrapper div:not([class*="grid"]):not([class*="calendar"]):not([class*="schedule"]):not([class*="slot"]):not([class*="cell"]) {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+    }
+
+    /* 2. Заголовки («Об аудитории», «16–20 ноября 2026» и др.) */
+    .wrapper h2,
+    .wrapper h3 {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* 3. Блок «Об аудитории»: убираем лишние отступы и укрупняем значения */
+    .main-content > div:first-of-type,
+    .main-content > section:first-of-type {
+        padding: 18px 16px !important;
+        gap: 10px !important;
+    }
+
+    /* Подписи («Вместимость», «Оборудование», «Расположение», «Доступность») */
+    .main-content label,
+    .main-content small,
+    .main-content [class*="label"],
+    .main-content [class*="title"] {
+        font-size: 14px !important;
+        margin-bottom: 2px !important;
+    }
+
+    /* 4. Условия бронирования (выделяем крупнее и читабельнее) */
+    .main-content hr + h3,
+    .main-content hr + div h3,
+    .main-content [class*="rules"] h3,
+    .main-content [class*="terms"] h3,
+    .main-content [class*="condition"] h3 {
+        font-size: 20px !important;
+        margin-top: 12px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .main-content hr ~ p,
+    .main-content hr ~ div,
+    .main-content [class*="rules"] p,
+    .main-content [class*="terms"] p,
+    .main-content [class*="condition"] p {
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+        color: #e2e8f0 !important;
+    }
+
+    /* 5. Все кнопки на вкладке («Предыдущая», «Следующая», «Забронировать →») */
+    .wrapper button,
+    .wrapper a[class*="btn"] {
+        font-size: 17px !important;
+        padding: 14px 18px !important;
+    }
+
+    /* 6. Сохраняем компактный шрифт только внутри ячеек сетки расписания */
+    [class*="grid"] [class*="slot"],
+    [class*="grid"] [class*="cell"],
+    [class*="calendar"] [class*="busy"],
+    [class*="schedule"] [class*="busy"] {
+        font-size:12px !important;
+        line-height: 0.2 !important;
+    }
+
+
+    /* 7. Футер */
+    .footer,
+    .footer a {
+        font-size: 14px !important;
+    }
+}
+@media (max-width: 768px) {
+    /* Опускаем только левую колонку со временем, не трогая высоту строк и сетку */
+    [class*="time-col"],
+    [class*="times-col"],
+    [class*="hours"],
+    [class*="time-axis"],
+    [class*="schedule"] > div:first-child,
+    [class*="calendar"] > div:first-child {
+        margin-top: 24px !important;
+    }
+}

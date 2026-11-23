@@ -445,7 +445,85 @@ a {
         width: 100%;
         text-align: center;
     }
+}@media (max-width: 768px) {
+    /* 1. Карточки шагов (01, 02, 03) */
+    .step-card {
+        padding: 18px 16px !important;
+        gap: 16px !important;
+    }
+
+    .step-number {
+        font-size: 16px !important;
+        padding: 10px 14px !important;
+    }
+
+    .step-card h3 {
+        font-size: 19px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .step-card p {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* 2. Карточка «Вход в систему» */
+    .auth-card {
+        padding: 24px 20px !important;
+    }
+
+    .auth-card .badge {
+        font-size: 13px !important;
+    }
+
+    .auth-card h2 {
+        font-size: 26px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .auth-desc {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+    }
+
+    /* Внутренний блок «Единый вход колледжа» */
+    .info-box {
+        padding: 16px !important;
+    }
+
+    .info-box h3,
+    .info-box strong {
+        font-size: 17px !important;
+        display: block;
+        margin-bottom: 4px !important;
+    }
+
+    .info-box p {
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+    }
+
+    /* Кнопка «Войти через IT-Team» */
+    .auth-card .btn-primary {
+        font-size: 17px !important;
+        padding: 16px 20px !important;
+        text-align: center !important;
+    }
+
+    /* Ссылки и подписи под кнопкой */
+    .auth-card p,
+    .auth-card a {
+        font-size: 15px !important;
+    }
+
+    /* 3. Футер */
+    .footer,
+    .footer a {
+        font-size: 14px !important;
+    }
 }
+
 @media (max-width: 768px) {
     .footer {
         display: flex;

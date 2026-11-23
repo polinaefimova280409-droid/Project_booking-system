@@ -573,3 +573,74 @@ button.btn-search {
         white-space: nowrap;
     }
 }
+
+@media (max-width: 768px) {
+    .search-card h2 {
+        font-size: 22px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .search-field label {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .input-box {
+        font-size: 16px !important;
+        padding: 14px 16px !important;
+    }
+
+    .btn-search {
+        font-size: 17px !important;
+        height: auto !important;
+        padding: 15px 20px !important;
+    }
+
+    .search-hint {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+
+    .section-block h2 {
+        font-size: 22px !important;
+    }
+
+    .link-all {
+        font-size: 15px !important;
+    }
+
+    .booking-card,
+    .catalog-card {
+        padding: 20px 18px !important;
+        gap: 14px !important;
+    }
+
+    .date-badge,
+    .status {
+        font-size: 13px !important;
+    }
+
+    .booking-info h3,
+    .catalog-card h3 {
+        font-size: 21px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .booking-info p,
+    .catalog-card p {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+    }
+
+    .booking-link,
+    .catalog-link {
+        font-size: 16px !important;
+    }
+
+    .footer,
+    .footer a {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+}

@@ -748,12 +748,71 @@ input[type="date"].filter-input {
 }
 
 @media (max-width: 768px) {
+    .item-card .type-badge {
+        font-size: 13px !important;
+    }
+
+    .item-card h3 {
+        font-size: 22px !important;
+        line-height: 1.25 !important;
+    }
+
+    .item-card .item-specs {
+        font-size: 17px !important;
+        line-height: 1.4 !important;
+    }
+
+    .item-card .item-features {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+
+    .item-card .item-status {
+        font-size: 15px !important;
+    }
+
+    .item-card .item-action {
+        font-size: 17px !important;
+    }
+}
+@media (max-width: 768px) {
+    .filters-sidebar h2 {
+        font-size: 22px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .filters-sidebar .filter-group label {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .filters-sidebar .filter-input {
+        font-size: 16px !important;
+        padding: 14px 16px !important;
+    }
+
+    .filters-sidebar .btn-filter {
+        font-size: 17px !important;
+        padding: 15px 20px !important;
+    }
+
+    .filters-sidebar .btn-reset {
+        font-size: 16px !important;
+        padding: 14px 20px !important;
+    }
+    .footer,
+    .footer a {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+}
+@media (max-width: 768px) {
     .footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         gap: 12px;
         padding: 16px 20px;
         margin-top: auto;
